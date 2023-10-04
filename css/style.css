@@ -243,13 +243,14 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .modal-content {
   background-color: #fff;
   padding: 20px;
-  width: 90%;
+  width: 528px;
+  height: 581px;
 }
 
 .is-hidden {
@@ -261,7 +262,7 @@ h6 {
   border: 1px solid #ff0000;
   color: #fff;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
 }
