@@ -4,6 +4,7 @@
   --text-font-family: "Open Sans", sans-serif;
   --link-hover-color: #ff6c00;
   --heading-alternative-color: #303030;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .global-header {
@@ -66,10 +67,6 @@ h6 {
   font-weight: 700;
 }
 
-.button {
-  cursor: pointer;
-}
-
 .centered-container {
   display: flex;
   justify-content: center;
@@ -101,6 +98,15 @@ h6 {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border var(--transition);
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #ff6c00;
+  border: 1px solid #fff;
 }
 
 .section-dark button {
@@ -109,12 +115,6 @@ h6 {
 
 .section-light button {
   color: #303030;
-}
-
-.button:hover {
-  background-color: #fff;
-  color: #ff6c00;
-  border: 1px solid #fff;
 }
 
 .section {
@@ -205,6 +205,7 @@ h6 {
   list-style: none;
   flex-grow: 1;
   background-image: linear-gradient(rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
+  transition: background-image 3s;
 }
 
 .prices-list:hover {
