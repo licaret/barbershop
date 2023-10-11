@@ -217,13 +217,21 @@
     <!-- Book Service Modal -->
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="close-btn" data-modal-close>&times;</button>
+        <svg class="close-btn" data-modal-close>
+          <use href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
 
         <form action="" method="get" autocomplete="off" class="contact-form">
           <div class="form-section">
-            <label for="name">Name</label>
+            <label class="form-label" for="name">Name</label>
             <div class="input-container">
-              <input type="text" name="name" id="name" required />
+              <input
+                class="textfield"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
               <svg>
                 <use href="./images/symbol-defs.svg#icon-person"></use>
               </svg>
@@ -231,9 +239,16 @@
           </div>
 
           <div class="input-container">
-            <label for="email">Email</label>
+            <label class="form-label" for="email">Email</label>
             <div class="input-container">
-              <input type="email" name="email" id="email" required />
+              <input
+                class="textfield"
+                type="text"
+                name="email"
+                id="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
               <svg>
                 <use href="./images/symbol-defs.svg#icon-email"></use>
               </svg>
@@ -241,9 +256,32 @@
           </div>
 
           <div class="input-container">
-            <label>Comments</label>
-            <textarea rows="20"></textarea>
+            <label class="form-label">Comments</label>
+            <textarea placeholder="Enter the text"></textarea>
           </div>
+
+          <div class="input-container terms-and-conditions-container">
+            <input
+              type="checkbox"
+              class="terms-and-conditions-check"
+              name="terms-and-conditions-check"
+              id="terms-and-conditions-check"
+              value="Checked"
+            />
+            <label
+              class="terms-and-conditions-label"
+              for="terms-and-conditions-check"
+            >
+              <svg class="icon-checkbox">
+                <use href="./images/symbol-defs.svg#icon-checkbox"></use>
+              </svg>
+              <span>
+                I agree with the letter and accept the
+                <a href="#">Terms and Conditions</a>
+              </span>
+            </label>
+          </div>
+
           <input type="submit" value="Send" />
         </form>
       </div>
