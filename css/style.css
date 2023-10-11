@@ -248,9 +248,10 @@ h6 {
 
 .modal-content {
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
   width: 528px;
   height: 581px;
+  position: relative;
 }
 
 .is-hidden {
@@ -262,7 +263,46 @@ h6 {
   border: 1px solid #ff0000;
   color: #fff;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.input-container svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 12px;
+}
+
+input,
+textarea {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 11px 12px 11px 42px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid rgba(33, 150, 243, 1);
+}
+
+input:focus + svg {
+  fill: rgba(33, 150, 243, 1);
 }
