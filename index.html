@@ -18,6 +18,32 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg>
+          <use href="images/symbol-defs.svg#icon-close-mobile-menu" />
+        </svg>
+      </button>
+
+      <nav class="menu-drawer-navigation">
+        <ul>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#services">Services and Prices</a></li>
+          <li><a href="#">Barbers</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+
+        <a href="tel:+380441111111" class="phone-number"> +38 044 111 11 11 </a>
+        <button data-modal-open class="button">Book a Service</button>
+
+        <div>
+          <a href="https://www.youtube.com" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
+        </div>
+      </nav>
+    </div>
+
     <header class="global-header">
       <aside>
         <a href="./index.html">
@@ -43,22 +69,22 @@
         <div class="nav-container">
           <nav class="main-navigation">
             <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="#">Services and Prices</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services and Prices</a></li>
               <li><a href="#">Barbers</a></li>
               <li><a href="#">Contacts</a></li>
             </ul>
           </nav>
 
           <div class="contact-container">
-            <a href="tel:+380441111111" class="phone-number"
-              >+38 044 111 11 11</a
-            >
+            <a href="tel:+380441111111" class="phone-number">
+              +38 044 111 11 11
+            </a>
             <button type="button" class="button">Book a Service</button>
           </div>
         </div>
 
-        <div class="nav-container-mobile">
+        <div class="menu-button js-open-menu">
           <svg>
             <use href="./images/symbol-defs.svg#icon-menu"></use>
           </svg>
@@ -82,14 +108,43 @@
         <div class="container">
           <div class="section-with-two-columns">
             <div class="section-images">
-              <img
-                src="./images/barber-img-1.png"
-                alt="Frizer pune spuma de ras"
-              />
-              <img
-                src="./images/barber-img-2.png"
-                alt="Frizer barbiereste cu briceag"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="./images/barber-img-1-d.png"
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/barber-img-1-t.png"
+                />
+
+                <img
+                  src="./images/barber-img-1-d.png"
+                  alt="Frizer pune spuma de ras"
+                />
+              </picture>
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="./images/barber-img-2-d.png"
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/barber-img-2-t.png"
+                />
+
+                <img
+                  src="./images/barber-img-2-d.png"
+                  alt="Frizer barbiereste cu briceag"
+                />
+              </picture>
             </div>
             <div>
               <div class="section-description">
@@ -271,7 +326,40 @@
         <h3>for true connoisseurs of the atmosphere</h3>
         <h2>Our Barbers</h2>
 
-        <img src="images/barber_john_smith.png" alt="John Smith" />
+        <picture>
+          <!-- Desktop -->
+          <source
+            media="(min-width: 1158px)"
+            srcset="
+              ./images/barber_john_smith-d.png    1x,
+              ./images/barber_john_smith-d-2x.png 2x
+            "
+          />
+
+          <!-- Tablet -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/barber_john_smith-t.png    1x,
+              ./images/barber_john_smith-t-2x.png 2x
+            "
+          />
+
+          <!-- Mobile -->
+          <source
+            srcset="
+              ./images/barber_john_smith-m.png    1x,
+              ./images/barber_john_smith-m-2x.png 2x
+            "
+          />
+
+          <img
+            src="./images/barber_john_smith-d.png"
+            alt="John Smith"
+            class="img-test"
+          />
+        </picture>
+
         <br />
         <span>John Smith</span>
         <br />
@@ -283,7 +371,7 @@
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
         <svg class="close-btn" data-modal-close>
-          <use href="./images/symbol-defs.svg#icon-close"></use>
+          <use href="./images/symbol-defs.svg#icon-close-modal"></use>
         </svg>
 
         <form action="" method="get" autocomplete="off" class="contact-form">
@@ -352,6 +440,13 @@
       </div>
     </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
