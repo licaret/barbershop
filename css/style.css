@@ -11,13 +11,45 @@
 .global-header {
   background-color: #333333;
   display: flex;
+  height: 680px;
+}
+
+.global-header aside {
+  display: none;
+}
+
+.global-header section {
+  width: 100%;
+}
+
+.global-header aside .social-media {
+  display: flex;
+}
+
+.global-header .logo-mobile {
+  position: absolute;
+  top: 40px;
+  left: 31px;
+}
+
+.global-header a svg {
+  width: 70px;
+  height: 70px;
 }
 
 .nav-container {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: space-between;
+  display: none;
+}
+
+.nav-container-mobile {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.nav-container-mobile svg {
+  width: 40px;
+  height: 40px;
 }
 
 .global-header .main-navigation ul {
@@ -191,7 +223,10 @@ h6 {
 }
 
 .prices {
-  display: flex;
+  display: none;
+}
+
+.prices-mobile {
   margin: 50px 0;
 }
 
@@ -379,4 +414,54 @@ textarea:focus {
 
 .terms-and-conditions-check:checked + label > svg {
   display: none;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .global-header aside {
+    display: block;
+    width: 155px;
+    background-color: #fff;
+  }
+
+  .global-header .logo-mobile {
+    display: none;
+  }
+
+  .global-header a svg {
+    width: 70px;
+    margin-top: 32px;
+    margin-left: 55px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .nav-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-container-mobile {
+    display: none;
+  }
+
+  .prices-list-mobile {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .prices {
+    display: flex;
+    margin: 50px 0;
+  }
+
+  .prices-mobile {
+    display: none;
+  }
 }

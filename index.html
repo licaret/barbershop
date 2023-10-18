@@ -19,42 +19,62 @@
   </head>
   <body>
     <header class="global-header">
-      <a href="./index.html">
-        <img src="./images/logo.svg" alt="Logo BarberShop" />
+      <aside>
+        <a href="./index.html">
+          <svg>
+            <use href="./images/symbol-defs.svg#icon-logo-black"></use>
+          </svg>
+        </a>
+
+        <div class="social-media">
+          <a href="https://www.youtube.com" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <img src="./images/vertical-dash.svg" alt="Vertical Dash" />
+        </div>
+      </aside>
+
+      <a href="./index.html" class="logo-mobile">
+        <svg>
+          <use href="./images/symbol-defs.svg#icon-logo-white"></use>
+        </svg>
       </a>
 
-      <div class="nav-container">
-        <nav class="main-navigation">
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Services and Prices</a></li>
-            <li><a href="#">Barbers</a></li>
-            <li><a href="#">Contacts</a></li>
-          </ul>
-        </nav>
-
-        <div class="contact-container">
-          <a href="tel:+380441111111" class="phone-number">+38 044 111 11 11</a>
-          <button type="button" class="button">Book a Service</button>
-        </div>
-      </div>
-
       <section>
-        <a href="https://www.youtube.com" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <img src="./images/vertical-dash.svg" alt="Vertical Dash" />
+        <div class="nav-container">
+          <nav class="main-navigation">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Services and Prices</a></li>
+              <li><a href="#">Barbers</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <div class="contact-container">
+            <a href="tel:+380441111111" class="phone-number"
+              >+38 044 111 11 11</a
+            >
+            <button type="button" class="button">Book a Service</button>
+          </div>
+        </div>
+
+        <div class="nav-container-mobile">
+          <svg>
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </div>
+
+        <div class="header-text">
+          <hr />
+          <span>A hair salon for men in Kyiv</span>
+          <h1>BarberShop</h1>
+          <p>
+            We are experts in trendy men's haircuts. We work quickly, carefully,
+            and tastefully.
+          </p>
+        </div>
       </section>
     </header>
-
-    <section>
-      <hr />
-      <span>A hair salon for men in Kyiv</span>
-      <h1>BarberShop</h1>
-      <p>
-        We are experts in trendy men's haircuts. We work quickly, carefully, and
-        tastefully.
-      </p>
-    </section>
 
     <main>
       <!-- About Section -->
@@ -136,6 +156,51 @@
           </ul>
 
           <ul class="prices-list">
+            <li>
+              <span>Trainee Haircut</span>
+              <span class="prices-dash"></span>
+              <span>from 50 UAH</span>
+            </li>
+            <li>
+              <span>Buzz Cut</span>
+              <span class="prices-dash"></span>
+              <span>from 200 UAH</span>
+            </li>
+            <li>
+              <span>Kids Haircut (&lt;12 y.o.)</span>
+              <span class="prices-dash"></span>
+              <span>from 300 UAH</span>
+            </li>
+            <li>
+              <span>Gray Coverage</span>
+              <span class="prices-dash"></span>
+              <span>from 200 UAH</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="prices-mobile">
+          <ul class="prices-list">
+            <li>
+              <span>Men's Haircut</span>
+              <span class="prices-dash"></span>
+              <span>from 300 UAH</span>
+            </li>
+            <li>
+              <span>Beard Trim</span>
+              <span class="prices-dash"></span>
+              <span>from 200 UAH</span>
+            </li>
+            <li>
+              <span>Mustache Trim</span>
+              <span class="prices-dash"></span>
+              <span>from 200 UAH</span>
+            </li>
+            <li>
+              <span>Straight Razor Shave</span>
+              <span class="prices-dash"></span>
+              <span>from 200 UAH</span>
+            </li>
             <li>
               <span>Trainee Haircut</span>
               <span class="prices-dash"></span>
