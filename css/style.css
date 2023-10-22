@@ -22,6 +22,12 @@
   width: 100%;
 }
 
+.section-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .global-header aside .social-media {
   display: flex;
   flex-direction: row-reverse;
@@ -256,12 +262,22 @@ h6 {
   flex: 0 1 50%;
 }
 
-.section-images {
-  display: flex;
+.about-section .section-images {
+  display: none;
 }
 
-.section-images img + img {
-  margin-left: 30px;
+.about-section button {
+  margin-top: 40px;
+}
+
+.about-section .small-text {
+  color: #555;
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.28px;
 }
 
 .prices {
@@ -537,6 +553,36 @@ textarea:focus {
   .global-header .logo-mobile {
     display: none;
   }
+
+  .section-with-two-columns > *:nth-child(2) {
+    margin-left: 30px;
+  }
+
+  .about-section .section-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-section .section-description .section-heading {
+    color: #303030;
+    font-family: var(--heading-font-family);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.4px;
+  }
+
+  .about-section .section-description .normal-text {
+    color: #555;
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+  }
 }
 
 /* Desktop */
@@ -550,6 +596,10 @@ textarea:focus {
 
   .menu-button {
     display: none;
+  }
+
+  .about-section .section-images {
+    flex-direction: row;
   }
 
   .prices-list-mobile {
