@@ -375,6 +375,90 @@ h6 {
   letter-spacing: 2.1px;
 }
 
+.our-barbers-section {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  background: #f7f7f7;
+}
+
+.our-barbers-section .barbers-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.our-barbers-section .barbers-wrapper .barber-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.our-barbers-section .barbers-wrapper .barber-container .barber-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-barbers-section .barber-container .barber-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.our-barbers-section .barber-social-media .svg-container {
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.our-barbers-section .barber-social-media .svg-container svg {
+  width: 20px;
+  height: 20px;
+  fill: #303030;
+}
+
+.our-barbers-section .barber-social-media .svg-container:hover svg {
+  fill: var(--link-hover-color);
+  cursor: pointer;
+}
+
+.our-barbers-section .barber-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.our-barbers-section .barber-description span:first-child {
+  color: #303030;
+  font-family: var(--text-font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.36px;
+}
+
+.our-barbers-section .barber-description span:last-child {
+  color: #ff6c00;
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+}
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -688,5 +772,11 @@ textarea:focus {
   .old-school-section .container .rating-boxes-container {
     width: 50%;
     margin-top: 0;
+  }
+
+  .our-barbers-section .barbers-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
   }
 }
