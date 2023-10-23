@@ -302,6 +302,79 @@ h6 {
   margin-right: 6px;
 }
 
+/* .old-school-section .old-school-article {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+} */
+
+.old-school-section .container .section-with-two-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.old-school-section .rating-boxes-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  margin-top: 44px;
+}
+
+.old-school-section .rating-boxes-container .rating-box {
+  width: 193px;
+  height: 133px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.old-school-section .rating-boxes-container .left-side-container,
+.old-school-section .rating-boxes-container .right-side-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.old-school-section .rating-boxes-container .right-side-container {
+  margin-top: 35px;
+}
+
+.old-school-section .rating-boxes-container .rating-box .rating-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.old-school-section .rating-boxes-container .rating-box .rating-value sup {
+  color: var(--link-hover-color);
+}
+
+.old-school-section .rating-boxes-container .rating-box .rating-description {
+  width: 122px;
+  color: #303030;
+  text-align: center;
+  font-family: var(--text-font-family);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.old-school-section .rating-boxes-container .rating-box .rating-number {
+  color: #303030;
+  font-family: var(--text-font-family);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.1px;
+}
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -553,6 +626,15 @@ textarea:focus {
     align-items: center;
     gap: 30px;
   }
+
+  .old-school-section .container .section-description,
+  .old-school-section .container .rating-boxes-container {
+    width: 75%;
+  }
+
+  .old-school-section .container .rating-boxes-container {
+    align-self: flex-end;
+  }
 }
 
 /* Desktop */
@@ -596,5 +678,15 @@ textarea:focus {
 
   .prices-mobile {
     display: none;
+  }
+
+  .old-school-section .container .section-with-two-columns {
+    flex-direction: row-reverse;
+  }
+
+  .old-school-section .container .section-description,
+  .old-school-section .container .rating-boxes-container {
+    width: 50%;
+    margin-top: 0;
   }
 }
