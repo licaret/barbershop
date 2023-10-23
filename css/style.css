@@ -489,19 +489,53 @@ textarea:focus {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .global-header aside {
-    display: block;
     width: 155px;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .global-header aside .social-media {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    transform: rotate(-90deg);
   }
 
   .global-header .logo-mobile {
     display: none;
   }
 
-  .global-header a svg {
+  .global-header .logo {
+    position: absolute;
+    left: 55px;
+    top: 32px;
+  }
+
+  .global-header .logo svg {
     width: 70px;
-    margin-top: 32px;
-    margin-left: 55px;
+  }
+
+  .global-header .social-media a:link,
+  .global-header .social-media a:visited {
+    color: #303030;
+    font-family: var(--text-font-family);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.2px;
+    text-decoration: none;
+  }
+
+  .global-header .social-media a:hover {
+    color: var(--link-hover-color);
+  }
+
+  .global-header .social-media a:active {
+    color: #ff0000;
   }
 }
 
