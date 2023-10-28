@@ -453,6 +453,19 @@ h6 {
   letter-spacing: 0.28px;
 }
 
+.portofolio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.portofolio-section .portofolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -713,6 +726,12 @@ textarea:focus {
   .old-school-section .container .rating-boxes-container {
     align-self: flex-end;
   }
+
+  .portofolio-section .portofolio-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 /* Desktop */
@@ -772,5 +791,9 @@ textarea:focus {
     flex-direction: row;
     justify-content: center;
     gap: 30px;
+  }
+
+  .portofolio-section .portofolio-container {
+    flex-wrap: nowrap;
   }
 }
