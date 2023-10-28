@@ -302,12 +302,6 @@ h6 {
   margin-right: 6px;
 }
 
-/* .old-school-section .old-school-article {
-  display: flex;
-  flex-direction: column;
-  gap: 44px;
-} */
-
 .old-school-section .container .section-with-two-columns {
   display: flex;
   flex-direction: column;
