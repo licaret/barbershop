@@ -89,7 +89,7 @@ h6 {
   margin: 0 auto;
 }
 
-.global-header .contact-container {
+.global-header .contacts-section {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -161,6 +161,7 @@ h6 {
 }
 
 .button {
+  width: 160px;
   font-family: var(--text-font-family);
   font-size: 12px;
   font-weight: 600;
@@ -466,6 +467,116 @@ h6 {
   gap: 30px;
 }
 
+.book-a-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  padding: 84px 31px;
+}
+
+.contact-bottom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  width: 100%;
+}
+
+.contact-bottom-form input,
+.contact-bottom-form textarea {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #9da4bd66;
+  padding: 8px 0;
+}
+
+.contact-bottom-form textarea {
+  height: 75px;
+}
+
+.contact-bottom-form input::placeholder,
+.contact-bottom-form textarea::placeholder {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.contacts-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #191c26;
+}
+
+.contacts-section .book-a-service {
+  flex: 1;
+}
+
+.contacts-section .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  background-image: url("../images/contacts-bg-m.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 84px 31px;
+}
+
+.contacts-section .contacts .contact-information {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.contacts-section .contacts .contact-information .section-description {
+  text-align: center;
+}
+
+.contacts-section .contacts .contact-information .contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts-section .contact-information .contact-list .contact-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  color: #9da4bd;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.36px;
+}
+
+.contacts-section .contact-information .contact-list .contact-list-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contacts-section .contacts .working-hours .heading-with-dash {
+  color: #fff;
+}
+
+.contacts-section .contacts .working-hours .program-time {
+  color: #9da4bd;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.36px;
+}
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -732,6 +843,46 @@ textarea:focus {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .contacts-section .book-a-service {
+    align-items: flex-start;
+  }
+
+  .contacts-section .book-a-service,
+  .contacts-section .contacts {
+    padding: 100px 40px;
+  }
+
+  .contacts-section .contacts {
+    flex-direction: row;
+    background-image: url("../images/contacts-bg-t.png");
+  }
+
+  .contacts-section .contacts .contact-information,
+  .contacts-section .contacts .working-hours {
+    flex: 1;
+  }
+
+  .contacts-section .contacts .contact-information {
+    text-align: left;
+  }
+
+  .contacts-section .contacts .working-hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts-section .name-telephone-inputs-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .contacts-section .name-telephone-inputs-wrapper .input-container {
+    flex: 1;
+  }
 }
 
 /* Desktop */
@@ -795,5 +946,32 @@ textarea:focus {
 
   .portofolio-section .portofolio-container {
     flex-wrap: nowrap;
+  }
+
+  .contacts-section {
+    flex-direction: row;
+  }
+
+  .contacts-section .book-a-service,
+  .contacts-section .contacts {
+    flex: 1;
+    padding: 130px 40px;
+  }
+
+  .contacts-section .contacts {
+    padding-left: 100px;
+    background-image: url("../images/contacts-bg-d.png");
+  }
+
+  .contacts-section .contacts {
+    flex-direction: column;
+  }
+
+  .contacts-section .contacts .contact-information .section-description {
+    text-align: left;
+  }
+
+  .contacts-section .contacts .working-hours {
+    align-items: flex-start;
   }
 }
